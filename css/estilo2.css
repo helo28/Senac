@@ -1,0 +1,83 @@
+/*COLANDO LÁ NO CANTO TIRANDO O ESPAÇO*/
+*{
+    margin: 0; 
+    padding: 0;
+}
+
+/*TIRANDO A BARRA DE ROLAGEM*/
+html{
+    overflow: hidden; /*ESCONDENDO*/
+    scroll-behavior: smooth; /*DESCE A PÁGINA SEM BARRA DE ROLAGEM APENAS CLICANDO
+    NAS PARTE ESCRITAS*/
+}
+
+/*ESCONDENDO A BARRA DE ROLAGEM EM QUALQUER NAVEGADOR TORNA PADÃO*/
+html::-webkit-scrollbar{
+    display: none;
+}
+
+/* É NAV UL POR QUE É NO UL QUE VAMOS MECHER E ELE ESTÁ DENTRO DO NAV ENTÃO CO
+LOCA OS DOIS*/
+nav ul{
+    list-style: none; /*TITANDO A BOLINHA*/
+    align-items: center; /*ELE FAZ O CONTEXTO SE POSICIONAR NO CENTRO E NA VERTICAL*/
+    display: flex; /*COLOCA UM ELEMENTO AO LADO OUTRO*/
+    gap: 1.5em; /*SEPARA OS ELEMENTOS UM DO OUTRO, POR QUE ANTES ELES FICAVAM GRUDADOS
+    ESSE 1.5 EM SIGNIFICA 24 (1 É 16 PADÃO) É O QUE DETERMINA O QUANTO VAI SEPARAR*/
+    position: fixed; /*VAI GRUDAR OS ELEMENTOS LÁ EM CIMA*/
+    height: 2em;
+    background: darkcyan;
+    /*ESSE COMANDO É PARA FAZER DEGRADE
+    linear-gradient(to right, rgb(98, 145, 36), rgb(149, 151, 21), rgb(0, 0, 0));*/
+    width: 100%; /* OU 100 VW (VIEW WIDTH)*/
+    box-shadow: 0px 2px, 10px rgba(0,0,0, .8); /*CRIANDO A SOMBRA DE BAIXO*/
+    padding-left: 1em; /*MARGEM DO LADO ESQUERDO*/
+}
+
+/*ELE FICAVA VERMELHO QUANDO CLICAVA NAS PALAVRAS ESSE COMANDO TIRA ISSO*/
+a{
+    text-decoration: none;
+}
+
+/*QUANDO A PESSOA CLICA EM UMA DAS PALAVRAS ELE FICA BRANCO SIGNIFICA QUE JÁ FOI VISITADO*/
+a:visited{
+    color: white;
+}
+
+/*ARRUMANDO AS LETRAS DA LATERAL*/
+section{
+    min-height: 100vh; /*VIEW HEIGHT*/
+    padding-top: 2.5em;
+    padding-left: 1.5em;
+    /*color:white;*/
+}
+
+/*COLOCANDO AS IMAGENS DE FUNDO*/
+#ini {
+    background: url(../img/imagem1.jpg);
+    background-size: cover; /*FAZENDO COM QUE A IMAGEM OCUPE O ESPAÇO CERTO NA TELA*/
+}
+
+#ser {
+    background: url(../img/imagem2.jpg);
+    background-size: cover;
+}
+
+#con {
+    background: url(../img/imagem3.jpg);
+    background-size: cover;
+}
+
+#cur {
+    background: url(../img/imagem4.jpg);
+    background-size: cover;
+}
+
+#sob {
+    background: url(../img/imagem5.jpg);
+    background-size: cover;
+}
+
+
+
+

@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*COLOCANDOA IMAGEM NO FUNDO*/
+body{
+    background-image: url("../img/fundo.jpg");
+    background-size: 100%;
+}
+
+/*DEFININDO O TAMANHO DA IMAGEM DO MENU*/
+img{
+    width: 60px;
+}
+
+/*CRIANDO A CAIXA TRANSPARÊNTE*/
+nav{
+    background: rgba(16,16,16,0.4); /*RGBA, O A É A PARA DAR TRANSPARÊNCIA*/
+    width: 200px;
+    height: 100%;
+    position: absolute; /*A POSIÇÃO SER INTEIRA*/
+    left: -200px; /*ELE TEM 200 DE LARGURA  ENTÃO SE COLOCAR -200 ELE VAI LA PARA O OUTRO LADO*/
+    transition: all 0.5s; /*DETERMINANDO A MOVIMENTAÇÃO DA CAIXA TRÂNSPARENTE PARA ABRIR*/
+}
+
+/*TIRANDO AQUELA CHECKBOX DA IMAGEM*/
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ nav {
+    transform: translateX(200px); /*ISSO TAMBEM É PARA MOVER A CAIXA*/
+}
+
+ul{
+    list-style: none; /*TIRANDO A BOLINHA DE MARCAÇÃO*/
+    top: 70px;
+    position: absolute;
+    width: 100%;
+}
+
+a{
+    text-decoration: none; /*TIRANDO O SUBLINHADO CRIADO PELO A DAS PALAVRAS*/
+    color: #fff; /*MUDANDO A COR DA LETRA DOS ESCRITOS*/
+    display: block; /*BLOQUEANDO QUALQUER ELEMENTO QUE TENTE ENTRAR NA ÁREA DO A. 
+    DESSA FORMA É POSSIVEL SEPARAR OS ELEMENTOS FEITOS AQUI EM BAIXO*/
+    padding: 20px; /*SEPARANDO UM POUCO UM ELEMENTO ESCRITO DO OUTRO*/
+}
+
+/*MUDANDO A COR DA CAIXA QUANDO PASSA O MAUSE EM CIMA*/
+a:hover{
+    background: rgba(175, 225, 255, 0.6);
+    color: darkblue; /*MUDANDO A COR DA LETRA QUANDO A COR DO FUNDO DELA
+    É ROCADO PELO AZUL DAQUI DE CIMA*/
+}
+
+label{
+    padding: 15px; /*DISTÂNCIA INTERNA*/
+    position: absolute;
+    z-index: 1; 
+}
+
+

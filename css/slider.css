@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*DIV PRINCIPAL*/
+.slider{ /*DEFININDO O TAMANHO DA TELINHA*/
+    width: 400px;
+    height: 300px;
+    margin: 50px auto;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.7);
+    overflow: hidden;
+}
+
+ul{ /*APAGANDO A BOLINHA*/
+    list-style: none;
+    width: 1600px; /*DEFININDO O TAMANHO DAS IMAGENS NO TOTAL ?????*/
+    height: 300px;
+    display: flex; /*PARA SE MOVER*/
+}
+
+ /*DEFININDO QUE É UMA ANIMAÇÃO E SE MOVE PARA SEMPRE*/
+li{
+    position: relative; /*ELE TEM POSIÇÃO RELATIVA POIS SE MOVE*/
+    animation: deslizar 10s linear infinite;
+}
+
+@keyframes deslizar {
+    0% {left: 0px;}
+    5% {left: -400px;}
+    25% {left: -400px;}    
+    30% {left: -800px;}
+    50% {left: -800px;}
+    55% {left: -1200px;}
+    75% {left: -1200px;}
+    80% {left: -1600px;}
+    100% {left: -1600px;}
+}
